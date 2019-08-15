@@ -14,7 +14,8 @@
       <span>2</span>
     </div>
     <div class="vertical-line"/>
-    <div>
+    <div class = "user-box">
+    <font-awesome-icon icon="question-circle" class = "question"/>
      <img
      class = "profile-pic"
      src = "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -55,7 +56,7 @@ export default class NavBar extends Vue {
 }
 .user-display{display:flex;
   margin-left: auto;
-  width: 20%;
+  width: 23%;
 }
 .nav-links{
   margin-top: 18px;
@@ -97,5 +98,11 @@ span{
 .icon{
     margin-left: 13%;
 }
-
+.user-box{
+  display:flex
+}
+.question{
+  margin-top: 18px;
+    margin-left: 8px;
+}
 </style>

@@ -9,9 +9,10 @@ import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faHome} from '@fortawesome/free-solid-svg-icons'
 import { faTools } from '@fortawesome/free-solid-svg-icons'
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faMoneyBill, faListAlt, faMapMarkerAlt , faNewspaper, faStar, faSearch, faHome, faTools)
+library.add(faMoneyBill, faListAlt, faMapMarkerAlt , faNewspaper, faStar, faSearch, faHome, faTools, faQuestionCircle )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

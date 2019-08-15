@@ -42,7 +42,7 @@ export default class SecondNavBar extends Vue {
 }
 .nav-buttons{
   display:flex;
-  margin-left:69%;
+  margin-left:67%;
   width: 12%;
   justify-content: space-around
 }
