@@ -1,6 +1,10 @@
 <template>
-  <div>
-    Gross Potential Rent
+  
+  <div class = "gpr-card">
+  <div class = "title">
+  Gross Potential Rent
+  </div>
+  <hr/>
     <canvas v-show="gprChart" :id="grossPotentialRentID"></canvas>
   </div>
 </template>
@@ -196,4 +200,24 @@ export default class NavBar extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.gpr-card{ 
+    display:flex;
+    width:45%;
+    background-color: white;
+    flex-direction: column;
+    border: 1px solid #ccc
+}
+.title{
+    margin-top: 15px;
+    margin-right: 338px;
+  
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
 </style>

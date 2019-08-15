@@ -2,10 +2,16 @@
   <div id="app">
     <NavBar :userInitials="userInitials" :menuItems="menuItems"/>
     <SecondNavBar :property="property"/>
+    <div class = "main">
     <PropertySummary :property="property"/>
-    <HistoricalOperatingExpenses :headers="opexHeaders" :items="opexItems"/>
+    <div class = "content">
+    <div class = "card-section">
     <GPRCard/>
     <OperatingExpensesCard/>
+    </div> 
+     <HistoricalOperatingExpenses :headers="opexHeaders" :items="opexItems"/>
+    </div>
+  </div>
   </div>
 </template>
 
@@ -18,6 +24,8 @@ import PropertySummary from './components/PropertySummary.vue'
 import HistoricalOperatingExpenses from './components/HistoricalOperatingExpenses.vue'
 import GPRCard from './components/GPRCard.vue'
 import OperatingExpensesCard from './components/OperatingExpensesCard.vue'
+
+
 @Component({
   components: {
     HelloWorld,
@@ -33,19 +41,16 @@ export default class App extends Vue {
 
   private userInitials: string = 'AP'
   private menuItems: object[] = [
-    { name: 'Property Analysis', active: true },
-    { name: 'Rent Roll Analyzer', active: false },
-    { name: 'Operating Statement Parser', active: false },
-    { name: 'Markert Analysis', active: false }
   ]
 
   private property: object = {
     name: 'West Loop Luxury',
-    address: '320 N Canal St, Chicago, IL 60606',
-    yearBuild: '--',
-    numberUnits: '--',
-    propetyType: '--',
-    avm: 7403292
+    address: '320 N Canal St,',
+    city: 'Chicago, IL 60606',
+    yearBuild: '2010',
+    numberUnits: '300 Units',
+    propetyType: 'Garden',
+    avm: '$7,403,292'
   }
 
   private opexHeaders = ['T12', 'T9', 'T6']
@@ -176,6 +181,19 @@ export default class App extends Vue {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color:#f0f0f0;
+}
+.card-section{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
   margin-top: 60px;
+}
+.content{
+  width:77%
+}
+.main{
+  display:flex;
+  flex-direction:row;
 }
 </style>

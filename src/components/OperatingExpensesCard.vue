@@ -1,6 +1,9 @@
 <template>
-  <div>
-    Operating Expenses
+  <div class = "pie-chart">
+  <div class = "title">
+  Operating Expenses
+  </div>
+   <hr/>
     <ChartPie v-if="loaded" :height="300" :chartData="chartData" :chartOptions="chartOptions"></ChartPie>
   </div>
 </template>
@@ -48,4 +51,24 @@ export default class NavBar extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.pie-chart{
+  display:flex;
+  background-color:white;
+  width: 45%;
+  flex-direction: column;
+  border: 1px solid #ccc;
+}
+.title{
+    margin-top: 15px;
+    margin-right: 338px;
+  
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
 </style>
